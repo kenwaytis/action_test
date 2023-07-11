@@ -27,7 +27,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ${{ secrets.DOCKER_USERNAME }}/${{ steps.repo_name.outputs.repo }}:latest
+          images: ${{ secrets.DOCKER_USERNAME }}/${{ steps.repo_name.outputs.repo }}
       
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
