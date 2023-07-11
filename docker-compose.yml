@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  action-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        HTTP_PROXY: ${HTTP_PROXY}
+    image: paidax/action-test:0.1
+    container_name: action-test
+    command: tail -f /dev/null
